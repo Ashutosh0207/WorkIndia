@@ -4,7 +4,7 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 
-// Add a new dining place (restricted to admins)
+// Add a new dining place
 router.post("/create", async (req, res) => {
   const { name, address, phone_no, website, operational_hours, booked_slots } =
     req.body;
@@ -33,7 +33,7 @@ router.post("/create", async (req, res) => {
   }
 });
 
-// Search dining places by name keywords
+// Search 
 router.get("/", async (req, res) => {
   const { name } = req.query;
 
